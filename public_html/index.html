@@ -2,24 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
   <title>Debmalya Mandal</title>
   <meta name="description" content="Debmalya Mandal">
   <link rel="canonical" href="http://www.columbia.edu/~dm3557/" />
   <style>
     @font-face { font-family: 'Source Sans Pro'; font-style: normal; font-weight: 400; src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(ssp.woff) format('woff'); }
     @font-face { font-family: 'Source Sans Pro'; font-style: normal; font-weight: 700; src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(ssp-bold.woff) format('woff'); }
-    body { font-family: "Source Sans Pro", sans-serif; max-width: 1000px; margin: 0 auto; padding: 0 1em; font-size: 13pt; color: #333333; text-align: justify; }
-    h2 { margin: 1em 0 0.8em; font-size: 170%;} a, a:visited { color: "aqua"; text-decoration: none; } a:hover, a:focus { color: "blue"; text-decoration: underline; }
+    body { font-family: "Source Sans Pro", sans-serif; max-width: 1000px; margin: 0 auto; padding: 0 1em; font-size: 12pt; color: #333333; text-align: justify; }
+    h2 { margin: 0.8em 0 0.8em; font-size: 140%;} a, a:visited { color: "darkviolet"; text-decoration: none; } a:hover, a:focus { color: "blue"; text-decoration: underline; }
     ul { padding: 0; list-style-position: inside; list-style-type: none; } .publications > li { margin-top: 1em; line-height: 150%;} img { float: left; margin-right: 2em; }
     footer { border-top: 1px solid #eee; text-align: right; color: #777; font-style: italic; margin-top: 1em; padding: 0.5em 0;}
   </style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
+<table border=0 cellspacing=10 cellpadding=10>
+  <tr>
+	<td valign="top" align="right" bgcolor=#ffffff>		<br>
+		<strong>Links</strong><br><br>
+		<strong><a href="pubs.html">Publications</a></strong><br>
+		<strong><a href="cv.pdf">Resume</a></strong><br>
+		<strong><a href="statement.pdf">Research Statement</a></strong><br>
+		<strong><a href="service.html">Service</a></strong><br>
+	</td>
 
-<header itemscope itemprop="about" itemtype="http://schema.org/Person" itemref="email">
-    <a href="me-small.jpg"><img alt="me" src="me-cropped.jpg" width="150" height="150" /></a>
+<td valign="top">
+<!-- <header itemscope itemprop="about" itemtype="http://schema.org/Person" itemref="email"> -->
+    <a href="me-small.jpg"><img alt="me" src="pic1.jpg" width="150" height="150" /></a>
     <h1><span itemprop="givenName">Debmalya</span> <span itemprop="familyName">Mandal</span></h1>
 
     <p itemscope itemprop="workLocation" itemtype="http://schema.org/PostalAddress">
@@ -32,45 +42,31 @@
 <p>I am currently a <span itemprop="jobTitle">Postdoctoral Fellow</span> at the <a
 						   itemprop="affiliation"
 		 href="http://datascience.columbia.edu/">Data Science Institute</a> of Columbia University in the city of New York. I am primarily working with 
-     <a href="http://www.cs.columbia.edu/~djhsu/">Daniel Hsu</a> and <a href="http://www.columbia.edu/~sa3305/">Shipra Agrawal</a>.
+     <a href="http://www.cs.columbia.edu/~djhsu/">Prof. Daniel Hsu</a> and <a href="http://www.columbia.edu/~sa3305/">Prof. Shipra Agrawal</a>.
 </p>
 <p>
    Before joining Columbia, I completed my PhD in Computer Science from <a href="https://www.seas.harvard.edu/">Harvard University</a> where I was advised by the inimitable 
-   <a href="http://www.eecs.harvard.edu/~parkes/">David C. Parkes</a>. I received my ME in Computer Science from <a href=https://www.iisc.ac.in/>Indian Institute of Science</a>. In the past, I also interned at <a href=""https://www.microsoft.com/en-us/research/group/microeconomics/>Microsoft Research, Redmond</a>.</header>
+   <a href="http://www.eecs.harvard.edu/~parkes/">Prof. David C. Parkes</a>. I received my ME in Computer Science from <a href=https://www.iisc.ac.in/>Indian Institute of Science</a>. In the past, I also interned at <a href=""https://www.microsoft.com/en-us/research/group/microeconomics/>Microsoft Research, Redmond</a>.
+<!-- </header> -->
 </p>
 
     <h3>Research Interests</h3>
-I am braodly interested in problems at the intersection of economics and computer science. Specifically, I am interested in how AI/ML systems can be integrated in society where where the decisions directly impacts people's lives. In terms of specific fields, I am interested in social choice theory, game theory, online learning, and algorithmic fairness. Presently, I am working on the following research projects.
-    <ul style="list-style-type:disc;">
+I work on problems in AI and statistical machine learning, with an emphasis on theory and modeling, and with applications focused on high-stakes, societal problems. I am particularly interested in how AI/ML systems can be integrated in society where where the decisions directly impact people's lives.
+<br/>
+<br/>
+In terms of specific fields, I am interested in Online Learning, Game Theory, Crowdsourcing, Voting, Causal Inference, and Algorithmic Fairness. 
+<!--    <ul style="list-style-type:disc;">
       <li>What is the optimal way to design large-scale voting platform that aggregates people's opinions?</li>
       <li>How do we ensure that an online algorithm, that interacts repeatedly with people, treats different subgroups fairly?</li>
-    </ul>
-
-   <h3>Selected Publications</h3> 
-   <ul class="publications"> 
-	<li><b>Efficient and Thrifty Voting by Any Means Necessary</b><br/>
-	Debmalya Mandal, <a href="http://procaccia.info/">Ariel D. Procaccia</a>, <a href="https://www.cs.toronto.edu/~nisarg/">Nisarg Shah</a>, and <a href="http://www.cs.cmu.edu/~dwoodruf/">David P. Woodruff</a></br>
-	In the <em>Thirty-third Conference on Neural Information Processing Systems (NeurIPS-2019)</em></br>
-	<font color="brown">Oral Presentation (One of 36 Out of 1428 Accepted Papers)</font><br/>
-	[<a href="papers/mpsw19.pdf">NeurIPS Paper</a>]</li>
-	<li><b>Peer Prediction with Heterogeneous Users</b><br/>
-	<a href="https://www.seas.upenn.edu/~aarpit/">Arpit Agarwal</a>, Debmalya Mandal, <a href="https://www.eecs.harvard.edu/~parkes/">David C. Parkes</a>, and <a href="https://www.cs.toronto.edu/~nisarg/">Nisarg Shah</a><br/>
-	In the <em>Eighteenth ACM Conference on Economics and Computation (EC-2017)</em><br/>
-	<font color="brown">Invited for the Special Issue on Selected Papers from EC-2017</font><br/>
-	[<a href="papers/amps-teac.pdf">TEAC Paper</a> | <a href="papers/amps17.pdf">EC Paper</a>]</li>
-   </ul>
-See <a href="pubs.html">here</a> for a full list.
-
-    <h3>Service</h3>
-	<b>Conference Program Committee / Reviewing</b>
-	<ul class="pc">
-		<li>Neural Information Processing Systems (NeurIPS), 2019.</li>
-		<li>International Conference on Machine Learning (ICML), 2019, 2020.</li>
-		<li>ACM Conference on Economics and Computation (EC), 2020.</li>
-		<li>AAAI Conference on Artificial Intelligence (AAAI), 2020.</li>
-	</ul> 
-<footer>Last updated on <time datetime="2019-12-03" itemprop="dateModified">12/03/2019</time></footer>
-
+    </ul> -->
+<br/>
+<br/>
+<!--
+<b>I am on the job market this year! Please email me if you think I will be a good fit.</b>
+-->
+</td>
+</tr>
+</table>
 </body>
 </html>
 

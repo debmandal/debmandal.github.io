@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://debmandal.github.io/sitemap.xml

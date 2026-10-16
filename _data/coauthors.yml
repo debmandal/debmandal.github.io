@@ -1,0 +1,152 @@
+# Co-author homepages. Names in the bibliography that match an entry here become links.
+# Keys are lower-case last names (accents removed); firstname lists every spelling used in papers.bib.
+
+"aggarwal":
+  - firstname: ["Charu"]
+    url: http://charuaggarwal.net/
+"agarwal":
+  - firstname: ["Arpit"]
+    url: https://www.seas.upenn.edu/~aarpit/
+"bagershahi":
+  - firstname: ["Peyman"]
+    url: https://scholar.google.com/citations?user=t4Uf1NIAAAAJ&hl=en
+"biswas":
+  - firstname: ["Arpita"]
+    url: https://sites.google.com/view/arpitabiswas
+"bogunovic":
+  - firstname: ["Ilija"]
+    url: https://rhinelab.ai/
+"chan":
+  - firstname: ["Hau"]
+    url: https://cse.unl.edu/~hchan/
+"dey":
+  - firstname: ["Palash"]
+    url: https://cse.iitkgp.ac.in/~palash/
+"dimitrakakis":
+  - firstname: ["Christos"]
+    url: http://www.cse.chalmers.se/~chrdimi/
+"du":
+  - firstname: ["Yali"]
+    url: https://yalidu.github.io/
+"gan":
+  - firstname: ["Jiarui"]
+    url: https://jgan.neocities.org/
+"hosseini":
+  - firstname: ["Hadi"]
+    url: https://faculty.ist.psu.edu/hadi/
+"hsu":
+  - firstname: ["Daniel"]
+    url: https://www.cs.columbia.edu/~djhsu/
+"jain":
+  - firstname: ["Shweta"]
+    url: https://sites.google.com/site/shwetajainiisc/home
+"jana":
+  - firstname: ["Suman"]
+    url: http://www.cs.columbia.edu/~suman/
+"kamalaruban":
+  - firstname: ["Parameswaran"]
+    url: https://markovkernel.net
+"kleine buening":
+  - firstname: ["Thomas"]
+    url: https://thomasklbg.github.io
+"kosan":
+  - firstname: ["Mert"]
+    url: https://www.mertkosan.com/
+"kwiatkowska":
+  - firstname: ["Marta"]
+    url: https://www.cs.ox.ac.uk/people/marta.kwiatkowska/
+"liang":
+  - firstname: ["Hao"]
+    url: https://haoliang-ml.github.io/
+"lin":
+  - firstname: ["Jiaying"]
+    url: https://warwick.ac.uk/fac/sci/dcs/people/u2293025/
+"liu":
+  - firstname: ["Yang"]
+    url: http://www.yliuu.com/
+"majumdar":
+  - firstname: ["Rupak"]
+    url: https://people.mpi-sws.org/~rupak/
+"medya":
+  - firstname: ["Sourav"]
+    url: https://souravmedya.github.io/
+"narahari":
+  - firstname: ["Yadati"]
+    url: https://gtl.csa.iisc.ac.in/hari/
+"nika":
+  - firstname: ["Andi"]
+    url: https://andignika.github.io # the old site used two spellings (andignika / andinika); check which is right
+"parkes":
+  - firstname: ["David C.", "David"]
+    url: https://www.eecs.harvard.edu/~parkes/
+"pollatos":
+  - firstname: ["Vasilis"]
+    url: https://archimedesai.gr/en/researchers/vasilis-pollatos
+"procaccia":
+  - firstname: ["Ariel D.", "Ariel"]
+    url: http://procaccia.info/
+"puhan":
+  - firstname: ["Amrit"]
+    url: https://www.amritpuhan.com/
+"radanovic":
+  - firstname: ["Goran"]
+    url: https://people.mpi-sws.org/~gradanovic/
+"sahitaj":
+  - firstname: ["Rilind"]
+    url: https://algo.rwth-aachen.de/team/sahitaj/index.en.shtml
+"sanyal":
+  - firstname: ["Swagato"]
+    url: http://cse.iitkgp.ac.in/~swagato/
+"sasnauskas":
+  - firstname: ["Paulius"]
+    url: https://sasnauskas.net
+"shah":
+  - firstname: ["Nisarg"]
+    url: https://www.cs.toronto.edu/~nisarg/
+"shi":
+  - firstname: ["Kevin"]
+    url: https://github.com/kevinshi97
+  - firstname: ["Shuqing"]
+    url: https://kclpure.kcl.ac.uk/portal/en/persons/shuqing-shi/
+"silva":
+  - firstname: ["Arlei"]
+    url: https://sites.cs.ucsb.edu/~arlei/
+"singla":
+  - firstname: ["Adish"]
+    url: https://machineteaching.mpi-sws.org/adishsingla.html
+"son":
+  - firstname: ["Seongho"]
+    url: https://scholar.google.com/citations?user=jBSBdecAAAAJ&hl=en
+"ta":
+  - firstname: ["The-Anh"]
+    url: https://the-anhta.github.io/
+"tran":
+  - firstname: ["Nam"]
+    url: https://warwick.ac.uk/fac/sci/dcs/people/u2130288/
+"tran-thanh":
+  - firstname: ["Long"]
+    url: https://human-agentlearning.github.io/
+"triantafyllou":
+  - firstname: ["Stelios"]
+    url: https://stelios30.github.io/
+"tzannetos":
+  - firstname: ["George"]
+    url: https://georgetzannetos.github.io
+"uzzi":
+  - firstname: ["Brian"]
+    url: https://www.kellogg.northwestern.edu/faculty/uzzi/htm/
+"vallam":
+  - firstname: ["Rohith D.", "Rohith"]
+    url: https://researcher.watson.ibm.com/researcher/view.php?person=in-rovallam
+"wang":
+  - firstname: ["Fangxin"]
+    url: https://fangxin-wang.github.io/
+"wing":
+  - firstname: ["Jeannette M.", "Jeannette"]
+    url: https://www.cs.columbia.edu/~wing/
+"woodruff":
+  - firstname: ["David P.", "David"]
+    url: http://www.cs.cmu.edu/~dwoodruf/
+"zhang":
+  - firstname: ["Duohan"]
+    url: https://duohan0520.github.io/

@@ -1,0 +1,22 @@
+{%- comment -%} Renders a list of group members. Usage: {% include dm_group_list.liquid people=site.data.group.phd %} {%- endcomment -%}
+<ul class="dm-people">
+  {% for person in include.people %}
+    {%- assign words = person.name | split: ' ' -%}
+    <li>
+      {% if person.image %}
+        <img class="dm-avatar" src="{{ person.image | prepend: '/assets/img/group/' | relative_url }}" alt="" width="48" height="48">
+      {% else %}
+        <span class="dm-avatar" aria-hidden="true">{{ words.first | slice: 0 }}{{ words.last | slice: 0 }}</span>
+      {% endif %}
+      <div>
+        {% if person.url %}<a class="dm-person-name" href="{{ person.url }}">{{ person.name }}</a>{% else %}<span class="dm-person-name">{{ person.name }}</span>{% endif %}
+        <div class="dm-person-meta">
+          {%- if person.role %}{{ person.role }}{% else %}PhD student{% endif -%}
+          {%- if person.since %}, since {{ person.since }}{% endif -%}
+          {%- if person.note %}. {{ person.note }}{% endif -%}
+          {%- if person.next %}. Now: {{ person.next }}{% endif -%}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

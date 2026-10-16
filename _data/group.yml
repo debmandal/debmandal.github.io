@@ -1,0 +1,17 @@
+# Group members shown on the home page and the Group page.
+# `image` is optional: put a square photo in assets/img/group/ and give its file name.
+phd:
+  - name: Jiaying Lin
+    url: https://warwick.ac.uk/fac/sci/dcs/people/u2293025/
+    since: Oct 2024
+    note: "[research topic]"
+  - name: Rafid Ameer Mahmud
+    url: https://scholar.google.com/citations?user=wLIAgaAAAAAJ&hl=en
+    since: Oct 2025
+    note: Co-supervised with <a href="https://www.dcs.warwick.ac.uk/~pturrini/">Paolo Turrini</a>
+
+# Alumni, MSc/UG project students, interns and visitors. Example:
+#  - name: Jane Doe
+#    role: MSc project, 2025
+#    next: PhD at ...
+alumni: []

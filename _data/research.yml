@@ -1,0 +1,38 @@
+# Research themes shown on the home page.
+# `topic` must match a value used in the `topics` field of _bibliography/papers.bib:
+# it links the theme to the filtered publications list.
+- title: Learning from human feedback
+  topic: Human feedback
+  summary: Making RLHF and preference-based alignment hold up when feedback is corrupted, strategic, shifted or multilingual.
+  papers:
+    - title: Distributionally robust RLHF
+      url: https://arxiv.org/abs/2503.00539
+    - title: Strategyproof RLHF
+      url: https://arxiv.org/abs/2503.09561
+
+- title: RL in strategic and changing worlds
+  topic: Reinforcement learning
+  summary: Performative reinforcement learning, principal–agent problems and multi-agent RL, where the learner’s policy reshapes its own environment.
+  papers:
+    - title: Performative RL
+      url: https://arxiv.org/abs/2207.00046
+    - title: Stochastic principal–agent problems
+      url: https://arxiv.org/abs/2306.03832
+
+- title: Social choice and information elicitation
+  topic: Social choice
+  summary: Voting with limited communication, surprisingly popular voting and peer prediction — getting good collective answers from people.
+  papers:
+    - title: Efficient and thrifty voting
+      url: https://debmandal.github.io/papers/mpsw19.pdf
+    - title: Surprisingly popular voting
+      url: https://www.jair.org/index.php/jair/article/view/19730
+
+- title: Fairness and causality
+  topic: Fairness and causality
+  summary: Fairness guarantees beyond the training distribution, socially fair RL, and causal effect analysis in multi-agent systems.
+  papers:
+    - title: Fairness beyond the training data
+      url: https://debmandal.github.io/papers/mdjwh20.pdf
+    - title: Agent-specific effects
+      url: https://arxiv.org/abs/2310.11334

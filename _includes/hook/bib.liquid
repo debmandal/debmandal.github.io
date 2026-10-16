@@ -1,0 +1,8 @@
+{%- comment -%}
+  al-folio calls this hook for every bibliography entry (see al_folio_core's _layouts/bib.liquid).
+  It prints the entry's `topics` field. The text is what the topic filters on the
+  Publications page search for, so keep topic names identical to those in _pages/publications.md.
+{%- endcomment -%}
+{% if entry.topics %}
+  <div class="dm-topics">{{ entry.topics | replace: ',', ' ·' }}</div>
+{% endif %}

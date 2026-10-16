@@ -1,0 +1,5 @@
+# Optional per-venue settings for the venue tag on each paper, keyed by the bib `abbr` field.
+# Every tag uses the site accent colour by default; add `url:` to make a tag a link, e.g.
+# "NeurIPS":
+#   url: https://neurips.cc/
+{}

@@ -1,0 +1,158 @@
+---
+layout: default
+---
+{%- comment -%}
+  Home page layout for debmandal.github.io.
+  A new layout (not an override of a gem file), so al-folio upgrades never touch it.
+  Content comes from _pages/about.md (front matter + bio), _data/research.yml,
+  _data/group.yml, _news/ and the `selected = {true}` entries in papers.bib.
+{%- endcomment -%}
+{%- assign full_name = site.first_name | append: ' ' | append: site.last_name -%}
+<div class="dm-home">
+  <section class="dm-hero" aria-label="Introduction">
+    {% if page.profile.image %}
+      <img
+        class="dm-portrait"
+        src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
+        alt="Portrait of {{ full_name }}"
+        width="200"
+        height="240"
+      >
+    {% endif %}
+    <div class="dm-hero-text">
+      <h1 class="dm-name">{{ full_name }}</h1>
+      {% if page.subtitle %}<p class="dm-role">{{ page.subtitle }}</p>{% endif %}
+      {% if page.pitch %}<p class="dm-pitch">{{ page.pitch }}</p>{% endif %}
+      <div class="dm-bio">{{ content }}</div>
+      {% if page.buttons %}
+        <div class="dm-actions">
+          {% for b in page.buttons %}
+            <a class="dm-btn{% if forloop.first %} dm-btn-primary{% endif %}" href="{{ b.url | relative_url }}">
+              {%- if b.icon %}<i class="{{ b.icon }}" aria-hidden="true"></i>{% endif -%}
+              {{- b.label -}}
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  {% if page.prospective %}
+    <section class="dm-callout" aria-labelledby="prospective-h">
+      <h2 id="prospective-h">Prospective students</h2>
+      <div>{{ page.prospective | markdownify }}</div>
+    </section>
+  {% endif %}
+
+  {% if site.data.research %}
+    <section id="research" class="dm-section" aria-labelledby="research-h">
+      <div class="dm-section-head">
+        <h2 id="research-h">Research</h2>
+        {% if page.research_note %}<p class="dm-section-note">{{ page.research_note }}</p>{% endif %}
+      </div>
+      <div class="dm-themes">
+        {% for t in site.data.research %}
+          <article class="dm-theme">
+            <h3>{{ t.title }}</h3>
+            <p>{{ t.summary }}</p>
+            {% if t.papers %}
+              <p class="dm-theme-papers">
+                See:
+                {% for p in t.papers -%}
+                  <a href="{{ p.url }}">{{ p.title }}</a>{% unless forloop.last %}, {% endunless %}
+                {%- endfor %}
+              </p>
+            {% endif %}
+            {% if t.topic %}
+              <a class="dm-theme-more" href="{{ '/publications/' | relative_url }}#{{ t.topic | uri_escape }}">All papers on this topic</a>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <div class="dm-split">
+    {% if page.announcements and page.announcements.enabled and site.news != empty %}
+      <section class="dm-section" aria-labelledby="news-h">
+        <div class="dm-section-head">
+          <h2 id="news-h">News</h2>
+          <a class="dm-more" href="{{ '/news/' | relative_url }}">All news</a>
+        </div>
+        {% assign news = site.news | reverse %}
+        {% assign news_limit = page.announcements.limit | default: 5 %}
+        <ul class="dm-news">
+          {% for item in news limit: news_limit %}
+            <li>
+              <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %Y' }}</time>
+              <span>
+                {%- if item.inline -%}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | strip }}
+                {%- else -%}
+                  <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {%- endif -%}
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    {% if site.data.group.phd %}
+      <section id="group" class="dm-section" aria-labelledby="group-h">
+        <div class="dm-section-head">
+          <h2 id="group-h">Group</h2>
+          <a class="dm-more" href="{{ '/group/' | relative_url }}">Group page</a>
+        </div>
+        {% include dm_group_list.liquid people=site.data.group.phd %}
+      </section>
+    {% endif %}
+  </div>
+
+  {% if page.selected_papers %}
+    <section class="dm-section" aria-labelledby="pubs-h">
+      <div class="dm-section-head">
+        <h2 id="pubs-h">Selected publications</h2>
+        <a class="dm-more" href="{{ '/publications/' | relative_url }}">All publications</a>
+      </div>
+      {% include selected_papers.liquid %}
+    </section>
+  {% endif %}
+
+  {% if page.teaching or page.service %}
+    <div class="dm-split">
+      {% if page.teaching %}
+        <section id="teaching" class="dm-section" aria-labelledby="teaching-h">
+          <div class="dm-section-head">
+            <h2 id="teaching-h">Teaching</h2>
+            <a class="dm-more" href="{{ '/teaching/' | relative_url }}">Teaching page</a>
+          </div>
+          <ul class="dm-plain-list">
+            {% for item in page.teaching %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+      {% if page.service %}
+        <section id="service" class="dm-section" aria-labelledby="service-h">
+          <div class="dm-section-head">
+            <h2 id="service-h">Service</h2>
+            <a class="dm-more" href="{{ '/service/' | relative_url }}">Full list</a>
+          </div>
+          <ul class="dm-plain-list">
+            {% for item in page.service %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <section class="dm-contact" aria-label="Contact">
+    {% if page.profile.address %}<address>{{ page.profile.address | markdownify }}</address>{% endif %}
+    {% if page.social %}
+      <div class="dm-contact-links">
+        <div class="contact-icons">{% social_links %}</div>
+        {% if site.contact_note %}<p class="contact-note">{{ site.contact_note }}</p>{% endif %}
+      </div>
+    {% endif %}
+  </section>
+</div>

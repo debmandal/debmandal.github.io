@@ -2,11 +2,12 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Conference versions are folded into their journal versions. Citations and the newest preprints are on <a href="https://scholar.google.com/citations?user=OquWQpEAAAAJ&hl=en">Google Scholar</a>.
+description: Publications by Debmalya Mandal, grouped by year and filterable by topic.
 nav: true
 nav_order: 1
 # Topic filters. Each name must match a value used in the `topics` field of _bibliography/papers.bib.
 # (Links are lower-cased because al-folio's search only matches lower-case terms.)
+# Keep `description` plain text: it also goes into the page's search-engine tags, where HTML breaks.
 topic_filters:
   - Human feedback
   - Reinforcement learning
@@ -17,6 +18,8 @@ topic_filters:
 ---
 
 <!-- _pages/publications.md -->
+
+<p class="dm-page-intro">Conference versions are folded into their journal versions. Citations and the newest preprints are on <a href="https://scholar.google.com/citations?user=OquWQpEAAAAJ&amp;hl=en">Google Scholar</a>.</p>
 
 <div class="dm-pub-tools">
   {% include bib_search.liquid %}

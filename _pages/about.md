@@ -11,12 +11,17 @@ profile:
   image: me-small.jpg # copy your current photo to assets/img/me-small.jpg
   address: |
     MB 1.15, Mathematical Sciences Building  
-    University of Warwick, Coventry CV4 7AL, UK  
-    [Debmalya.Mandal@warwick.ac.uk](mailto:Debmalya.Mandal@warwick.ac.uk)
+    University of Warwick, Coventry CV4 7AL, UK
+
+# Your address, split in two so it never appears whole in the page source.
+# The "Email" button shows it only when clicked.
+email:
+  user: Debmalya.Mandal
+  domain: warwick.ac.uk
 
 buttons: # the first one is drawn as the main button
   - label: Email
-    url: mailto:Debmalya.Mandal@warwick.ac.uk
+    reveal_email: true # shows the address from `email:` above when clicked, instead of opening a mail app
     icon: fa-solid fa-envelope
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=OquWQpEAAAAJ&hl=en
@@ -47,8 +52,9 @@ social: true
 # Short lists for the home page. Each item is one line of Markdown. Leave a list out to hide its section.
 # teaching:
 #   - "CS000: Module name (Term 1, 2026–27)"
-# service:
-#   - "Area chair: NeurIPS 2026"
+service:
+  - "Area chair: NeurIPS 2024–2026, ICML 2025–2026, IJCAI 2025"
+  - "Top reviewer: NeurIPS 2019 and 2021, ICML 2020"
 ---
 
 I am a member of the [Foundations of AI & ML](https://warwick.ac.uk/fac/sci/dcs/research/fam) group at Warwick DCS. Before Warwick, I was a postdoc at the [Max Planck Institute for Software Systems](https://www.mpi-sws.org/) with [Goran Radanovic](https://people.mpi-sws.org/~gradanovic/) and at Columbia’s [Data Science Institute](http://datascience.columbia.edu/) with [Daniel Hsu](https://www.cs.columbia.edu/~djhsu/). I received my PhD in Computer Science from [Harvard](https://www.seas.harvard.edu/), advised by [David C. Parkes](https://www.eecs.harvard.edu/~parkes/).

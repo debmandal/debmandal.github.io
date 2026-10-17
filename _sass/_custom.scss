@@ -263,6 +263,11 @@ footer.fixed-bottom {
 }
 
 .dm-btn {
+  appearance: none;
+  background: transparent;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -292,6 +297,30 @@ footer.fixed-bottom {
     border-color: var(--global-hover-color);
     color: var(--global-hover-text-color);
   }
+}
+
+// The email address after the Email button is clicked: plain, selectable text.
+.dm-email-shown {
+  cursor: text;
+  user-select: all;
+  font-family: $dm-mono;
+  font-size: 0.875rem;
+  border-color: var(--global-theme-color);
+  color: var(--global-text-color);
+
+  &:hover {
+    color: var(--global-text-color);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+}
+
+.dm-page-intro {
+  color: var(--global-text-color-light);
+  font-size: 0.9375rem;
 }
 
 /* ---------------------------------------------------------------- Home: callout */

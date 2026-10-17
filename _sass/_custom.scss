@@ -351,42 +351,98 @@ footer.fixed-bottom {
 }
 
 /* ---------------------------------------------------------------- Home: research themes */
+// Theme list with a detail panel. Before the script runs (or without JavaScript)
+// the tab list is hidden and every panel is shown, one under another.
 
-.dm-themes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
-  gap: 1.25rem;
+.dm-research-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem 2.5rem;
 }
 
-.dm-theme {
+.dm-tablist {
+  display: none;
+}
+
+.dm-tabpanels {
+  flex: 999 1 30rem;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
-  padding: 1.5rem;
-  border: 1px solid var(--global-divider-color);
+  gap: 1rem;
+}
+
+.dm-tabpanel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.75rem 2rem;
   border-radius: 8px;
+  background: var(--dm-tint);
+
+  &[hidden] {
+    display: none;
+  }
 
   h3 {
-    font-size: 1.25rem;
     margin: 0;
+    font-size: 1.375rem;
   }
 
   p {
     margin: 0;
     color: var(--dm-ink-2);
-    font-size: 1rem;
+    font-size: 1.0625rem;
   }
 
   .dm-theme-papers {
-    font-size: 0.875rem;
-    color: var(--global-text-color-light);
+    font-size: 0.9375rem;
+  }
+}
+
+.dm-research-tabs.is-tabbed .dm-tablist {
+  flex: 1 1 17.5rem;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--global-divider-color);
+}
+
+.dm-tab {
+  appearance: none;
+  min-height: 48px;
+  margin-left: -1px;
+  padding: 0.625rem 1rem;
+  border: 0;
+  border-left: 3px solid transparent;
+  background: transparent;
+  color: var(--global-text-color);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--global-theme-color);
+  }
+
+  &[aria-selected="true"] {
+    border-left-color: var(--global-theme-color);
+    background: var(--dm-surface);
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: -2px;
   }
 }
 
 .dm-theme-more {
-  margin-top: auto;
   padding-top: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
 }
 

@@ -90,25 +90,82 @@ layout: default
         <h2 id="research-h">Research</h2>
         {% if page.research_note %}<p class="dm-section-note">{{ page.research_note }}</p>{% endif %}
       </div>
-      <div class="dm-themes">
-        {% for t in site.data.research %}
-          <article class="dm-theme">
-            <h3>{{ t.title }}</h3>
-            <p>{{ t.summary }}</p>
-            {% if t.papers %}
-              <p class="dm-theme-papers">
-                See:
-                {% for p in t.papers -%}
-                  <a href="{{ p.url }}">{{ p.title }}</a>{% unless forloop.last %}, {% endunless %}
-                {%- endfor %}
-              </p>
-            {% endif %}
-            {% if t.topic %}
-              <a class="dm-theme-more" href="{{ '/publications/' | relative_url }}#{{ t.topic | downcase | uri_escape }}">All papers on this topic</a>
-            {% endif %}
-          </article>
-        {% endfor %}
+      {%- comment -%}
+        Theme list with a detail panel. Without JavaScript every panel is shown in turn;
+        the script below turns them into tabs (one open at a time, arrow keys move between themes).
+      {%- endcomment -%}
+      <div class="dm-research-tabs">
+        <div class="dm-tablist" role="tablist" aria-label="Research themes" aria-orientation="vertical">
+          {% for t in site.data.research %}
+            <button
+              type="button"
+              class="dm-tab"
+              role="tab"
+              id="theme-tab-{{ forloop.index }}"
+              aria-controls="theme-panel-{{ forloop.index }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              {% unless forloop.first %}
+                tabindex="-1"
+              {% endunless %}
+            >
+              {{ t.title }}
+            </button>
+          {% endfor %}
+        </div>
+        <div class="dm-tabpanels">
+          {% for t in site.data.research %}
+            <div class="dm-tabpanel" role="tabpanel" id="theme-panel-{{ forloop.index }}" aria-labelledby="theme-tab-{{ forloop.index }}" tabindex="0">
+              <h3>{{ t.title }}</h3>
+              <p>{{ t.summary }}</p>
+              {% if t.papers %}
+                <p class="dm-theme-papers">
+                  See:
+                  {% for p in t.papers -%}
+                    <a href="{{ p.url }}">{{ p.title }}</a>{% unless forloop.last %} · {% endunless %}
+                  {%- endfor %}
+                </p>
+              {% endif %}
+              {% if t.topic %}
+                <a class="dm-theme-more" href="{{ '/publications/' | relative_url }}#{{ t.topic | downcase | uri_escape }}">All papers on this topic</a>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
       </div>
+      <script>
+        (function () {
+          var root = document.querySelector(".dm-research-tabs");
+          if (!root) return;
+          var tabs = Array.prototype.slice.call(root.querySelectorAll(".dm-tab"));
+          var panels = Array.prototype.slice.call(root.querySelectorAll(".dm-tabpanel"));
+          root.classList.add("is-tabbed");
+          function select(index, moveFocus) {
+            tabs.forEach(function (tab, i) {
+              var on = i === index;
+              tab.setAttribute("aria-selected", on ? "true" : "false");
+              tab.tabIndex = on ? 0 : -1;
+              panels[i].hidden = !on;
+            });
+            if (moveFocus) tabs[index].focus();
+          }
+          tabs.forEach(function (tab, i) {
+            tab.addEventListener("click", function () {
+              select(i, false);
+            });
+            tab.addEventListener("keydown", function (event) {
+              var next = null;
+              if (event.key === "ArrowDown" || event.key === "ArrowRight") next = (i + 1) % tabs.length;
+              if (event.key === "ArrowUp" || event.key === "ArrowLeft") next = (i - 1 + tabs.length) % tabs.length;
+              if (event.key === "Home") next = 0;
+              if (event.key === "End") next = tabs.length - 1;
+              if (next === null) return;
+              event.preventDefault();
+              select(next, true);
+            });
+          });
+          select(0, false);
+        })();
+      </script>
     </section>
   {% endif %}
 

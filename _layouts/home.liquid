@@ -64,7 +64,7 @@ layout: default
               </p>
             {% endif %}
             {% if t.topic %}
-              <a class="dm-theme-more" href="{{ '/publications/' | relative_url }}#{{ t.topic | uri_escape }}">All papers on this topic</a>
+              <a class="dm-theme-more" href="{{ '/publications/' | relative_url }}#{{ t.topic | downcase | uri_escape }}">All papers on this topic</a>
             {% endif %}
           </article>
         {% endfor %}

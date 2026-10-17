@@ -6,13 +6,14 @@ description: Conference versions are folded into their journal versions. Citatio
 nav: true
 nav_order: 1
 # Topic filters. Each name must match a value used in the `topics` field of _bibliography/papers.bib.
+# (Links are lower-cased because al-folio's search only matches lower-case terms.)
 topic_filters:
   - Human feedback
   - Reinforcement learning
+  - Robustness
   - Social choice
   - Game theory
   - Fairness and causality
-  - Other ML
 ---
 
 <!-- _pages/publications.md -->
@@ -22,7 +23,7 @@ topic_filters:
   <nav class="dm-topic-filters" aria-label="Filter by topic">
     <a class="dm-chip" href="#" data-topic="">All</a>
     {% for t in page.topic_filters %}
-      <a class="dm-chip" href="#{{ t | uri_escape }}" data-topic="{{ t | downcase }}">{{ t }}</a>
+      <a class="dm-chip" href="#{{ t | downcase | uri_escape }}" data-topic="{{ t | downcase }}">{{ t }}</a>
     {% endfor %}
   </nav>
 </div>

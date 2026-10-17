@@ -19,6 +19,15 @@
     - title: Stochastic principal–agent problems
       url: https://arxiv.org/abs/2306.03832
 
+- title: Robustness
+  topic: Robustness
+  summary: Learning guarantees that survive corrupted data, poisoning attacks and distribution shift, from offline and multi-agent RL to learning from human feedback.
+  papers:
+    - title: Corruption robust RLHF
+      url: https://arxiv.org/abs/2402.06734
+    - title: Corruption-robust zero-sum Markov games
+      url: https://arxiv.org/abs/2403.07933
+
 - title: Social choice and information elicitation
   topic: Social choice
   summary: Voting with limited communication, surprisingly popular voting and peer prediction — getting good collective answers from people.

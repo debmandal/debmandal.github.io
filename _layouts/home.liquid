@@ -27,15 +27,55 @@ layout: default
       {% if page.buttons %}
         <div class="dm-actions">
           {% for b in page.buttons %}
-            <a class="dm-btn{% if forloop.first %} dm-btn-primary{% endif %}" href="{{ b.url | relative_url }}">
-              {%- if b.icon %}<i class="{{ b.icon }}" aria-hidden="true"></i>{% endif -%}
-              {{- b.label -}}
-            </a>
+            {%- capture btn_class %}dm-btn{% if forloop.first %} dm-btn-primary{% endif %}{% endcapture -%}
+            {% if b.reveal_email and page.email %}
+              <button
+                type="button"
+                class="{{ btn_class }} dm-email-reveal"
+                data-u="{{ page.email.user | split: '' | reverse | join: '' }}"
+                data-d="{{ page.email.domain | split: '' | reverse | join: '' }}"
+                aria-label="Show email address"
+              >
+                {%- if b.icon %}<i class="{{ b.icon }}" aria-hidden="true"></i>{% endif -%}
+                {{- b.label -}}
+              </button>
+            {% else %}
+              <a class="{{ btn_class }}" href="{{ b.url | relative_url }}">
+                {%- if b.icon %}<i class="{{ b.icon }}" aria-hidden="true"></i>{% endif -%}
+                {{- b.label -}}
+              </a>
+            {% endif %}
           {% endfor %}
         </div>
       {% endif %}
     </div>
   </section>
+
+  {% if page.email %}
+    <script>
+      // Email button: the address is stored reversed in two parts and only assembled on click,
+      // so it never appears whole in the page source.
+      document.addEventListener("click", function (event) {
+        var button = event.target.closest(".dm-email-reveal");
+        if (!button) return;
+        var unreverse = function (text) {
+          return text.split("").reverse().join("");
+        };
+        var shown = document.createElement("span");
+        shown.className = "dm-btn dm-email-shown";
+        shown.tabIndex = -1;
+        shown.textContent = unreverse(button.dataset.u) + "@" + unreverse(button.dataset.d);
+        button.replaceWith(shown);
+        shown.focus();
+        // Select the address so it can be copied straight away.
+        var range = document.createRange();
+        range.selectNodeContents(shown);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+      });
+    </script>
+  {% endif %}
 
   {% if page.prospective %}
     <section class="dm-callout" aria-labelledby="prospective-h">

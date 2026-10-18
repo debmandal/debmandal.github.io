@@ -299,6 +299,11 @@ defaults:
 
 sass:
   style: compressed
+  # The site's own styles live in assets/_sass/ (not _sass/) so that editing them
+  # changes the ?v= version tag on main.css and visitors' browsers fetch the new file.
+  # al_folio_core 1.0.15 only looks in assets/_sass/ when computing that tag.
+  load_paths:
+    - assets/_sass
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier

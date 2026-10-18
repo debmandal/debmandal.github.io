@@ -2,14 +2,18 @@
 ---
 
 % Fields used by this site (all optional):
-%   abbr        venue tag shown on the left
+%   abbr        venue tag shown on the left. Its colour shows the kind of venue:
+%               conference (default), journal or preprint, set per abbr in _data/venues.yml.
+%               A new journal abbreviation needs a line there to get the journal colour.
 %   selected    {true} puts the paper on the home page
 %   topics      comma-separated research topics; shown under the entry and used by the topic filters
 %   arxiv       arXiv id -> "arXiv" button      pdf / html / code / slides -> buttons
 %   award_name  short badge text (e.g. Oral)    award -> longer text revealed when the badge is clicked
 %   bibtex_show {true} adds a "Bib" button
 
-% ---------------------------------------------------------------- Working papers
+% ---------------------------------------------------------------- Preprints
+% Every @misc entry is listed under "Preprints" at the top of the Publications page,
+% before the year groups. Give them abbr = {Preprint}.
 
 @misc{mandal2026stability,
   title        = {Local and Global Stability in Performative Reinforcement Learning},
@@ -108,7 +112,6 @@
   html            = {https://www.jair.org/index.php/jair/article/view/19730},
   code            = {https://github.com/debmandal/Surprisingly-Popular-Voting},
   website         = {https://cacm.acm.org/news/255146-surprisingly-popular-voting-algorithm-to-recover-ranked-choices/fulltext},
-  additional_info = {. Supersedes the IJCAI 2021 version ([PDF](/papers/hmss21.pdf))},
   abbr            = {JAIR},
   topics          = {Social choice},
   selected        = {true},
@@ -179,7 +182,6 @@
   booktitle       = {Advances in Neural Information Processing Systems (NeurIPS)},
   year            = {2025},
   arxiv           = {2306.03832},
-  additional_info = {. Extended abstract at AAMAS 2024},
   abbr            = {NeurIPS},
   topics          = {Game theory, Reinforcement learning},
   bibtex_show     = {true}
@@ -333,6 +335,18 @@
   bibtex_show = {true}
 }
 
+@inproceedings{gan2024sequential,
+  title           = {Sequential Principal-Agent Problems with Communication: Efficient Computation and Learning},
+  author          = {Gan, Jiarui and Majumdar, Rupak and Mandal, Debmalya and Radanovic, Goran},
+  booktitle       = {Proceedings of the 23rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS)},
+  year            = {2024},
+  arxiv           = {2306.03832},
+  additional_info = {. Extended abstract},
+  abbr            = {AAMAS},
+  topics          = {Game theory, Reinforcement learning},
+  bibtex_show     = {true}
+}
+
 % ---------------------------------------------------------------- 2023
 
 @inproceedings{mandal2023performative,
@@ -431,6 +445,19 @@
   bibtex_show = {true}
 }
 
+@inproceedings{hosseini2021spvoting,
+  title       = {Surprisingly Popular Voting Recovers Rankings, Surprisingly!},
+  author      = {Hosseini, Hadi and Mandal, Debmalya and Shah, Nisarg and Shi, Kevin},
+  booktitle   = {Proceedings of the 30th International Joint Conference on Artificial Intelligence (IJCAI)},
+  year        = {2021},
+  pdf         = {https://debmandal.github.io/papers/hmss21.pdf},
+  code        = {https://github.com/debmandal/Surprisingly-Popular-Voting},
+  website     = {https://cacm.acm.org/news/255146-surprisingly-popular-voting-algorithm-to-recover-ranked-choices/fulltext},
+  abbr        = {IJCAI},
+  topics      = {Social choice},
+  bibtex_show = {true}
+}
+
 % ---------------------------------------------------------------- 2020
 
 @inproceedings{mandal2020fairness,
@@ -462,7 +489,6 @@
   journal         = {ACM Transactions on Economics and Computation (TEAC)},
   year            = {2020},
   pdf             = {https://debmandal.github.io/papers/amps-teac.pdf},
-  additional_info = {. Supersedes the EC 2017 version ([PDF](/papers/amps17.pdf)), which was invited to the special issue of selected papers from EC 2017},
   abbr            = {TEAC},
   topics          = {Social choice, Game theory},
   bibtex_show     = {true}
@@ -520,6 +546,18 @@
   abbr        = {Workshop},
   topics      = {Fairness and causality},
   bibtex_show = {true}
+}
+
+@inproceedings{agarwal2017peerprediction,
+  title           = {Peer Prediction with Heterogeneous Users},
+  author          = {Agarwal, Arpit and Mandal, Debmalya and Parkes, David C. and Shah, Nisarg},
+  booktitle       = {Proceedings of the 18th ACM Conference on Economics and Computation (EC)},
+  year            = {2017},
+  pdf             = {https://debmandal.github.io/papers/amps17.pdf},
+  additional_info = {. Invited to the special issue of selected papers from EC 2017},
+  abbr            = {EC},
+  topics          = {Social choice, Game theory},
+  bibtex_show     = {true}
 }
 
 @inproceedings{liu2017calibrated,

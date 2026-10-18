@@ -31,11 +31,12 @@ topic_filters:
   </nav>
 </div>
 
-<p class="dm-venue-key" aria-label="Venue colours">
+<!--p class="dm-venue-key" aria-label="Venue colours">
   <span class="dm-venue-swatch dm-venue-conf">Conference</span>
   <span class="dm-venue-swatch dm-venue-journal">Journal</span>
   <span class="dm-venue-swatch dm-venue-preprint">Preprint</span>
 </p>
+-->
 
 <div class="publications">
 

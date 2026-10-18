@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Publications by Debmalya Mandal, grouped by year and filterable by topic.
+description: Publications by Debmalya Mandal. Preprints first, then papers by year; filter by topic or search.
 nav: true
 nav_order: 1
 # Topic filters. Each name must match a value used in the `topics` field of _bibliography/papers.bib.
@@ -31,9 +31,18 @@ topic_filters:
   </nav>
 </div>
 
+<p class="dm-venue-key" aria-label="Venue colours">
+  <span class="dm-venue-swatch dm-venue-conf">Conference</span>
+  <span class="dm-venue-swatch dm-venue-journal">Journal</span>
+  <span class="dm-venue-swatch dm-venue-preprint">Preprint</span>
+</p>
+
 <div class="publications">
 
-{% bibliography %}
+<h2 class="bibliography">Preprints</h2>
+{% bibliography --group_by none --query @misc %}
+
+{% bibliography --query !@misc %}
 
 </div>
 

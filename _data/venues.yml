@@ -1,5 +1,16 @@
-# Optional per-venue settings for the venue tag on each paper, keyed by the bib `abbr` field.
-# Every tag uses the site accent colour by default; add `url:` to make a tag a link, e.g.
-# "NeurIPS":
-#   url: https://neurips.cc/
-{}
+# Venue-box colours, keyed by the `abbr` field in _bibliography/papers.bib.
+# Conferences and workshops use the default colour, so they need no entry here.
+# Journals and preprints are listed so they get their own colours; the colour values are
+# defined (with dark-mode versions) in assets/_sass/_custom.scss.
+# When you add a paper in a new journal, add its abbr here with the journal colour.
+# You can also add `url:` to an entry to make its venue box a link.
+
+"JAIR":
+  color: "var(--dm-venue-journal-bg)"
+"TEAC":
+  color: "var(--dm-venue-journal-bg)"
+"SIGKDD Expl.":
+  color: "var(--dm-venue-journal-bg)"
+
+"Preprint":
+  color: "var(--dm-venue-preprint-bg)"

@@ -29,8 +29,8 @@ buttons: # the first one is drawn as the main button
   - label: CV
     url: /cv.pdf
     icon: fa-solid fa-file-lines
-  - label: Research statement
-    url: /statement.pdf
+  - label: Statements & slides
+    url: /writings/
   - label: GitHub
     url: https://github.com/debmandal
     icon: fa-brands fa-github

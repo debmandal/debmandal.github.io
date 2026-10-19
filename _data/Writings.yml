@@ -1,0 +1,36 @@
+# Documents on the Writings page, grouped by category (categories appear in this order).
+#
+# Each item:
+#   title:  shown in the list and above the viewer (required)
+#   url:    a PDF in this repo (e.g. /statement.pdf) or any web address (required)
+#   note:   one short line under the title, e.g. venue and year (optional)
+#   id:     short name for direct links, e.g. /writings/#research-statement (optional;
+#           made from the title if left out)
+#
+# PDFs open in the viewer on the page. Other links (blog posts, articles) open in a new tab.
+# A category with no items is not shown.
+
+- category: Statements
+  items:
+    - title: Research statement
+      url: /statement.pdf
+      id: research-statement
+    # - title: Teaching statement
+    #   url: /teaching-statement.pdf
+    # - title: Diversity statement
+    #   url: /diversity-statement.pdf
+
+- category: Slides
+  items:
+    - title: Efficient and Thrifty Voting by Any Means Necessary
+      note: Oral presentation, NeurIPS 2019, Vancouver
+      url: /papers/vancouver19.pdf
+    # - title: Talk title
+    #   note: Seminar, University, 2026
+    #   url: /slides/talk-2026.pdf
+
+- category: Other writing
+  items:
+    # - title: Lecture notes on ...
+    #   note: Course name, 2026
+    #   url: /notes/lecture-notes.pdf

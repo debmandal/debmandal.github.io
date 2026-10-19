@@ -38,6 +38,7 @@ To preview locally (needs Docker): `docker compose pull && docker compose up`, t
 | Venue-box colours (conference / journal / preprint) | `_data/venues.yml`; a new journal abbreviation needs a line there |
 | Preprints section | any `@misc` entry in `papers.bib` is listed under Preprints, above the years |
 | News | add a file to `_news/` (copy an existing one) |
+| Statements, slides and other writing | `_data/writings.yml` (put the PDF in the repo, e.g. `slides/`, and add an item) |
 | Group members | `_data/group.yml` |
 | Co-author links in author lists | `_data/coauthors.yml` |
 | Colours and fonts | `assets/_sass/_custom.scss` (tokens at the top) |

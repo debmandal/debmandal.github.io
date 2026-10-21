@@ -53,7 +53,7 @@ social: true
 # teaching:
 #   - "CS000: Module name (Term 1, 2026–27)"
 service:
-  - "Area chair: NeurIPS 2024–2026, ICML 2025–2026, IJCAI 2025"
+  - "Area chair: NeurIPS 2024–2026, ICML 2025–2027, ICLR 2027, IJCAI 2025"
   - "Top reviewer: NeurIPS 2019 and 2021, ICML 2020"
 ---
 

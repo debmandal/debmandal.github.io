@@ -10,7 +10,7 @@ nav_order: 4
 ## Area chair / senior program committee
 
 - Neural Information Processing Systems (NeurIPS): 2024, 2025, 2026
-- International Conference on Machine Learning (ICML): 2025, 2026
+- International Conference on Machine Learning (ICML): 2025, 2026, 2027
 - International Conference on Learning Representations (ICLR): 2027
 - International Joint Conference on Artificial Intelligence (IJCAI): 2025
 
